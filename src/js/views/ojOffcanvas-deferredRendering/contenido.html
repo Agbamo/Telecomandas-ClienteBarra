@@ -1,0 +1,11 @@
+<div id='navlistdemo'>
+    <oj-navigation-list data='[[dataSource]]'
+                        item.renderer='[[oj.KnockoutTemplateUtils.getRenderer("server_template", true)]]'>
+    </oj-navigation-list>
+  </div>
+  <script type='text/html' id='server_template'>
+    <li data-bind='attr:{id : $data["id"]}'>
+      <a href='#' data-bind='text: $data["name"]'>
+      </a>
+    </li>
+  </script>

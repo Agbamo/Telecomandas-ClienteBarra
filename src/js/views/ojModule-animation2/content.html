@@ -1,0 +1,39 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+
+
+ 
+ 
+    
+
+    <h1>Elija su plato</h1>
+    <oj-list-view id="listview" aria-label="list using array" data="[[ArrayDataProvider]]" item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('server_template', true)]]">
+    </oj-list-view>
+    
+    <label for="curr-selection">Los platos seleccionados son:&nbsp; </label>
+    <span data-bind="text: currentItem"></span>
+  
+    <script type="text/html" id="server_template">
+      <li data-bind="attr: {id: $data['idCategoria']}, click: $parent.mostrarNombre">
+        <div class="oj-lg-4 oj-md-4 oj-sm-12">       
+            <strong data-bind="text: $data.nombre"></strong>
+                  
+      </li>
+    </script>
+  
+  </div>
+
+
+  </div>
+  <div class="oj-hybrid-padding">
+    <oj-button id="buttonIcon2"  
+    on-click='[[gotoList]]'> 
+<span slot='startIcon' class='oj-fwk-icon-caret-start oj-fwk-icon'></span> 
+Back
+</oj-button>
+
+<!--<span data-bind="text: content"></span>
+-->
+</div>

@@ -1,0 +1,21 @@
+<div id="page1" class="demo-page">
+    <oj-list-view id="listview" aria-label="drill down list" 
+                  data='[[dataSource]]'
+                  item.renderer='[[oj.KnockoutTemplateUtils.getRenderer("note_template", true)]]'
+                  on-current-item-changed='[[gotoContent]]'>
+    </oj-list-view>
+</div>
+
+<script type="text/html" id="note_template">
+    <li data-bind="attr: {id: 'item'+id}">
+        <div class="oj-flex">
+            <div class="oj-flex-item" style="font-weight: bold" data-bind="text: name"></div>
+            <div class="oj-flex-item oj-flex-item-initial">
+              <div class="oj-flex oj-sm-flex-items-initial oj-sm-justify-content-flex-end oj-sm-align-items-center">                
+                <span class="oj-flex-item" data-bind="text: date"></span>
+                <div role="presentation" style="position: relative; margin: 0" class="oj-flex-item oj-fwk-icon oj-listview-drill-icon"></div>
+              </div>
+            </div>         
+        </div>
+    </li>
+</script>

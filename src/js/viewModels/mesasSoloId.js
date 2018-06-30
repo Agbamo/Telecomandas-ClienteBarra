@@ -1,0 +1,43 @@
+
+define(['ojs/ojcore', 'knockout', 'jquery', 'appController', 'ojs/ojarraydataprovider'],
+ function(oj, ko, $, app) {
+  
+    function MesasSoloIdViewModel() {
+      var self = this;
+      
+      getMesas();
+      self.mesas=ko.observableArray(mesas);
+      
+      self.mesasYEstados = new oj.ArrayDataProvider(self.mesas, {'idAttribute': 'id'});
+
+      this.ren= function(context)
+        {
+            return {'insert':context['data']['id']};
+        };
+        
+      self.handleActivated = function(info) {
+        // Implement if needed
+      };
+
+      self.handleAttached = function(info) {
+        // Implement if needed
+      };
+
+      self.handleBindingsApplied = function(info) {
+        // Implement if needed
+      };
+
+      self.handleDetached = function(info) {
+        // Implement if needed
+      };
+    }
+
+    $(
+      function() 
+      {
+          //ko.applyBindings(new MesasSoloIdViewModel(), document.getElementById('listViewMesas'));
+      }
+  );
+    return new MesasSoloIdViewModel();
+  }
+);
