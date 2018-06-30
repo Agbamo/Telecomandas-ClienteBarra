@@ -1,7 +1,7 @@
 
 
 var aaa;
-define(['ojs/ojcore', 'knockout', 'jquery','appController','ojs/ojarraydataprovider', 'ojs/ojlistview'],
+define(['ojs/ojcore', 'knockout', 'jquery','appController','ojs/ojarraydataprovider', 'ojs/ojlistview','ojs/ojknockout', 'ojs/ojbutton'],
   function (oj, ko, $,appData) {
 
  
@@ -40,6 +40,16 @@ define(['ojs/ojcore', 'knockout', 'jquery','appController','ojs/ojarraydataprovi
         this.gotoList = function(event) {
             moduleParams.currentModule(moduleParams.currentList);            
         };
+        self.button2Text = "Button 2";
+
+    
+    self.clickedButton = ko.observable("");
+    self.buttonClick = function(event){
+
+      document.write('kkk');
+        self.clickedButton(event.currentTarget.id);
+        return true;
+    }
     }
     return viewModel;
 

@@ -48,8 +48,8 @@ define(['ojs/ojcore', 'knockout','ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarrayt
         iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
       {name: 'Mesas', id: 'mesasSoloId',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
-       {name: 'Categorias', id: 'elegirCategoria',
-       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},
+       /*{name: 'Categorias', id: 'elegirCategoria',
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},*/
       {name: 'Usuarios', id: 'users',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
        {name: 'Realizar comanda', id: 'realComand',
